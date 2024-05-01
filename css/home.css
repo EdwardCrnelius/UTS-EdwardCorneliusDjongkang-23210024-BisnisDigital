@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
+
+* {
+    padding:0;
+    margin:0;
+    font-family:"syne";
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+button {
+    border:none;
+    outline:none;
+    background:transparent;
+    cursor:pointer;
+}
+
+.navbar-container {
+    position:fixed;
+    width:100%;
+    z-index:1;
+}
+
+.navbar-content {
+    max-width:1150px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    padding:1.5rem 0;
+    column-gap: 1rem;
+    justify-content: space-between;
+}
+
+#hamburger-menu {
+    display:none;
+}
+
+.main-logo {
+    color:#fff;
+    font-weight:700;
+}
+
+.links-container {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.contact-navbar-button {
+    padding:0.85rem 1.2rem;
+    border-radius: 6px;
+    color:#fff;
+    font-weight: 600;
+    font-size:0.85rem;
+    background-color: hsl(255, 90%, 60%);
+    
+}
+
+.navbar-links {
+    display:flex;
+    align-items: center;
+    list-style-type: none;
+    column-gap:1.8rem;
+}
+
+.navbar-links li a {
+  color:hsl(var(--hue), 24%, 16%);
+  font-weight: 600;
+  font-size:0.92rem;
+}
+
+.navbar-links li a.active{
+    color:hsl(255, 90%, 60%);
+}
+
+.hero-container {
+    width:100%;
+    min-height:100vh;
+    display:flex;
+}
+
+.hero-left-fill {
+    width:30%;
+    position:relative;
+    height:100vh;
+    background-color: hsl(255, 90%, 60%);
+}
+
+.my-picture-profile {
+    width:430px;
+    height:430px;
+    background-color:#fff;
+    border:solid 15px hsl(255, 90%, 60%);
+    border-radius:50%;
+    display: flex;
+    position:absolute;
+    right:-220px;
+    top: 50%;
+    transform:translateY(-50%);
+    justify-content: center;
+    align-items: center;
+}
+
+.my-picture-profile img {
+    width:330px;
+    object-fit:cover;
+    height:330px;
+    border:solid 15px hsl(255, 90%, 60%);
+    border-radius:50%;
+}
+
+.hero-right-container {
+    flex:1;
+    height:100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-right-content {
+    width:500px;
+    margin-left:18rem;
+}
+
+.hero-right-content h1 {
+    font-size:2.8rem;
+    color:  hsl(var(--hue), 24%, 16%);
+    font-weight: 600;
+}
+
+.hero-right-content p {
+    color:hsl(var(--hue), 8%, 60%);
+    line-height:1.5rem;
+    width:80%;
+    margin:1rem 0 2.5rem;
+    font-size:1rem;
+    text-align: justify;
+}
+
+@media screen and (max-width:660px) {
+    .navbar-container {
+        padding:0 1.5rem;
+    }
+
+    .links-container {
+        width: 65%;
+        height:100vh;
+        background-color: #fff;
+        position:fixed;
+        top:0;
+        left:-100%;
+        transition:all 0.3s ease-in;
+        flex-direction: column;
+        align-items: flex-start;
+        padding:1.5rem;
+        row-gap:1.5rem;
+    }
+
+    .links-container.active {
+        left:0;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap:1rem;
+    }
+
+    #hamburger-menu{
+        display:block;
+        font-size:1.2rem;
+        color:#fff;
+    }
+
+    .hero-container{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+
+    .hero-left-fill {
+        width:100%;
+        height:30vh;
+    }
+
+    .my-picture-profile{
+        width:230px;
+        height:230px;
+        right:0;
+        top:48%;
+        left:50%;
+        transform:translateX(-50%) translateY(0);
+        border:solid 8px hsl(255, 90%, 60%);
+    }
+
+    .my-picture-profile img {
+        width:170px;
+        height:170px;
+        border:solid 8px hsl(255, 90%, 60%);
+
+    }
+
+
+    .hero-right-content{
+        width:100%;
+        margin-left:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin-top:1rem;
+    }
+
+    .hero-right-content h1 {
+        font-size:1.8rem;
+    }
+
+     .hero-right-content p {
+        width:85%;
+     }
+}
+
+@media screen and (max-width:380px) {
+    .hero-right-content h1 {
+        font-size:1.7rem;
+    }
+
+    .hero-right-content p {
+        width:90%;
+    }
+}

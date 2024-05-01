@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
+
+* {
+    padding:0;
+    margin:0;
+    font-family:"Syne", sans-serif;
+    box-sizing:border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+button {
+    border:none;
+    outline:none;
+    background:transparent;
+    cursor:pointer;
+}
+
+.navbar-container {
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: #fff;
+    z-index:999;
+    width:100%;
+    z-index:999999;
+}
+
+.navbar-content {
+    max-width:1150px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1.5rem 0;
+}
+
+#hamburger-menu {
+    display:none;
+}
+
+.main-logo {
+    color:hsl(var(--hue), 24%, 16%);
+    font-weight:600;
+}
+
+.links-container {
+    display: flex;
+    align-items: center;
+    column-gap:2rem;
+}
+
+.contact-navbar-button {
+    padding:0.85rem 1.2rem;
+    border-radius: 6px;
+    color:#fff;
+    font-weight: 600;
+    font-size:0.85rem;
+    background-color: hsl(255, 90%, 60%);
+    
+}
+
+.navbar-links {
+    display:flex;
+    align-items: center;
+    list-style-type: none;
+    column-gap:1.8rem;
+}
+
+.navbar-links li a {
+  color:hsl(var(--hue), 24%, 16%);
+  font-weight: 600;
+  font-size:0.92rem;
+}
+
+.navbar-links li a.active{
+    color:#6b3df5;
+}
+
+.main-colleges-container {
+    padding:6rem 0;
+    max-width:1150px;
+    margin:0 auto;
+    min-height:100vh;
+}
+
+.colleges-choose-reason {
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    margin:1.5rem 0 0;
+    column-gap:2rem;
+}
+
+.colleges-photo-container{
+    background-image: url(https://itbss.ac.id/wp-content/uploads/2023/09/IMG_7818-1-scaled.jpg);
+    background-size:cover;
+    background-position:right top;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    min-height:450px;
+    width: 500px;
+}
+
+.colleges-reason-description {
+    flex:1;
+}
+
+.reason-description {
+    margin:0 0 1rem;
+}
+
+.reason-description p {
+    line-height:1.5rem;
+    margin:0.6rem 0 0;
+    font-size:0.9rem;
+    text-align: justify;
+}
+
+.campus-history {
+    margin:2rem 0 0;
+}
+
+.campus-history h3 {
+    margin: 0 0 1rem;
+}
+
+.campus-history p {
+    line-height:1.5rem;
+    font-size:0.9rem;
+    text-align:justify;
+}
+
+.lecturers {
+    margin:2rem 0 0;
+}
+
+.university--lecturers-items{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:1rem;
+    margin:1.5rem 0 0;
+}
+
+.lectuerrs-item{
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.lectuerrs-item-info{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:1rem;
+    transition:all 0.35s ease-in;
+}
+
+.lectuerrs-item-info h3 {
+    font-size:0.95rem;
+}
+
+.lectuerrs-item img{
+    width:100%;
+}
+
+.lectuerrs-item:hover .lectuerrs-item-info{
+    top:0;
+}
+
+.colleges-programs {
+    margin:2rem 0 0;
+}
+
+.program-lists {
+    margin:1.5rem 0 0;
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1rem;
+}
+
+.program-lists li {
+    text-decoration:none;
+    margin:0 0 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    width:100%;
+    cursor:pointer;
+    padding:1.5rem;
+    border-radius:6px;
+    background-color: #fff;
+    text-align: justify;
+}
+
+.program-lists li p {
+    line-height:1.5rem;
+    -webkit-line-clamp:3;
+    overflow:hidden;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    display:-webkit-box;
+    text-overflow: ellipsis;
+    font-size:0.9rem;
+    margin:0.6rem 0 1.5rem;
+}
+
+.program-lists li a {
+    color:hsl(255, 90%, 60%);
+    font-size:0.85rem;
+    padding:0.6rem 0.8rem;
+    border-radius:100px;
+    background-color: hsl(255, 90%, 60%);
+    color:#fff;
+}
+
+.footer-container{
+    background-color: #ecf0f1;
+    padding:2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap:1rem;
+}
+
+.footer-content h5 {
+    font-size:0.9rem;
+    color:#7f8c8d;
+
+}
+
+@media screen and (max-width:660px) {
+    .navbar-container {
+        padding:0 1.5rem;
+    }
+
+    .links-container {
+        width: 65%;
+        height:100vh;
+        background-color: #fff;
+        position:fixed;
+        top:0;
+        left:-100%;
+        transition:all 0.3s ease-in;
+        flex-direction: column;
+        align-items: flex-start;
+        padding:1.5rem;
+        row-gap:1.5rem;
+    }
+
+    .links-container.active {
+        left:0;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap:1rem;
+    }
+
+    #hamburger-menu{
+        display:block;
+        font-size:1.2rem;
+    }
+
+    .main-colleges-container{
+        padding:4rem 1.5rem;
+    }
+
+
+    .colleges-photo-container{
+        width:100%;
+    }
+
+    .colleges-choose-reason {
+        row-gap:1.5rem;
+    }
+
+    .program-lists {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .university--lecturers-items{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .colleges-choose-reason{
+        flex-direction: column;
+    }
+}
